@@ -10,7 +10,20 @@
     <div class="box" id="one"></div>
     <div class="box" id="two"></div>
     <div class="box" id="three"></div>
-    <div class="chat-container">
+
+    <div id="passcodeModal" class="modal">
+      <div class="modal-content">
+        <h2>Enter Passcode</h2>
+        <input
+          type="text"
+          id="modalPasscodeInput"
+          placeholder="Enter your passcode"
+        />
+        <button id="submitPasscode">Submit</button>
+      </div>
+    </div>
+
+    <div id="chat_container" class="chat-container" style="display: none">
       <h1 style="color: white">Weby Chat Room</h1>
       <div id="messagesContainer"></div>
       <div class="actions">
