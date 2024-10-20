@@ -1,27 +1,104 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #03031d;
+    overflow: hidden;
 }
 
 .chat-container {
-    width: 400px;
+    height: 700px;
+    width: 700px;
     margin: 50px auto;
     padding: 20px;
     border: 1px solid #ccc;
-    background: white;
+    background: rgb(12, 26, 199);
+    background: linear-gradient(49deg, rgba(12, 26, 199, 1) 0%, rgba(235, 15, 233, 0.9861405743938201) 78%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 57% 43% 63% 37% / 36% 55% 45% 64%;
+
 }
 
 #messagesContainer {
-    max-height: 300px;
+    height: 350px;
+    width: 380px;
+    border-radius: 20px;
     overflow-y: auto;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     padding: 10px;
-    background-color: #f9f9f9;
+    background-color: #110e36;
+    scrollbar-width: none;
+    
 }
 
 .message {
     padding: 5px;
-    border-bottom: 1px solid #eee;
+    min-width: 350px;
+    word-wrap: break-word;
+}
+
+.box{
+
+    position: absolute;
+    z-index: -1;
+    transition: 5s ease-in-out;
+    background: rgb(12, 26, 199);
+        background: linear-gradient(49deg, rgba(12, 26, 199, 0.5435635435814952) 0%, rgba(235, 15, 233, 0.35028623265712533) 78%);
+}
+#one{
+    height: 700px;
+    width: 700px;
+    border-radius: 30% 70% 50% 50% / 32% 46% 54% 68%;
+ 
+}
+#two{
+    height: 500px;
+    width: 500px;
+    border-radius: 51% 49% 63% 37% / 76% 70% 30% 24%;
+}
+#three{
+    height: 600px;
+    width: 600px;
+    border-radius: 32% 68% 63% 37% / 44% 36% 64% 56%;
+}
+.actions{
+    height: 50px;
+    width: 380px;
+    display: flex;
+    align-items: flex-start;
+}
+input{
+    background-color: rgb(19, 8, 67);
+    position: relative;
+    border: none;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    color: whitesmoke;
+    margin-right: 10px;
+}
+input::placeholder{
+    color: white;
+    text-align: center;
+}
+
+button{
+    height: 30px;
+    border-radius: 10px;
+    border-color: transparent;
+}
+#sendMessage{
+    width: 70px;
+    background-color: rgb(60, 137, 231);
+    font-size: larger;
+}
+
+#clearChat{
+    width: 100px;
+    background-color: rgb(231, 91, 59);
+    margin-left: 20px;
 }

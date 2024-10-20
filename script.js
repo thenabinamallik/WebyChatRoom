@@ -57,6 +57,7 @@ const loadMessages = () => {
     const messageElement = document.createElement("div");
     messageElement.classList.add("message");
     messageElement.innerText = messageData.message;
+    messageElement.style.color = getRandomColor();
     messagesContainer.appendChild(messageElement);
 
     // Scroll to the bottom of the messages container
@@ -79,5 +80,40 @@ clearChatButton.addEventListener("click", () => {
   }
 });
 
+const colors = [
+  "#fbf8cc",
+  "#fde4cf",
+  "#ffcfd2",
+  "#f1c0e8",
+  "#cfbaf0",
+  "#a3c4f3",
+  "#90dbf4",
+  "#8eecf5",
+  "#98f5e1",
+  "#b9fbc0",
+];
+
+function getRandomColor() {
+  const randomIndex = Math.floor(Math.random() * colors.length);
+  return colors[randomIndex];
+}
 // Load messages on startup
 loadMessages();
+const boxes = document.querySelectorAll(".box");
+
+// Function to move a box to a random position
+function moveBox(box) {
+  const randomX = Math.random() * (window.innerWidth - 500); // Random X position
+  const randomY = Math.random() * (window.innerHeight - 1000); // Random Y position
+  const randomRotation = Math.random() * 180;
+  box.style.transform = `translate(${randomX}px, ${randomY}px) rotate(${randomRotation}deg)`; // Move to the new position
+  // Recursively move the box after a random delay
+  setTimeout(() => {
+    moveBox(box);
+  }, 5000);
+}
+
+// Start moving each box
+boxes.forEach((box) => {
+  moveBox(box); // Start moving the box immediately
+});

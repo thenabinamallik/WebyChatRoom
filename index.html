@@ -3,17 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Chat Room</title>
+    <title>Weby...</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="box" id="one"></div>
+    <div class="box" id="two"></div>
+    <div class="box" id="three"></div>
     <div class="chat-container">
-      <h1>Chat Room</h1>
+      <h1 style="color: white">Weby Chat Room</h1>
       <div id="messagesContainer"></div>
-      <input type="text" id="messageInput" placeholder="Type your message..." />
-      <button id="sendMessage">Send</button>
-      <button id="clearChat">Clear Chat</button>
-      <!-- Clear Chat Button -->
+      <div class="actions">
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Type your message..."
+        />
+        <button id="sendMessage">Send</button>
+        <button id="clearChat">Clear Chat</button>
+      </div>
     </div>
     <script type="module" src="script.js"></script>
   </body>
