@@ -182,8 +182,8 @@ button {
 }
 #copyright{
     position: absolute;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 5px;
+    right: 5px;
     color: white;
     font-size: small;
     text-align: right;
@@ -211,13 +211,18 @@ button {
     button {
         width: auto;
     }
-         .modal-content {
-             width: 90%;
-             margin: 20% auto;
-         }
+    .modal-content {
+        width: 90%;
+        margin: 20% auto;
+    }
     
-         .modal input {
-             width: 100%;
-         }
+    .modal input {
+        width: 100%;
+    }
+
+    #colyright{
+        z-index: -1;
+        opacity: 0.3;
+    }
 }
 
