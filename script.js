@@ -22,17 +22,20 @@ const sendMessageButton = document.getElementById("sendMessage");
 const clearChatButton = document.getElementById("clearChat");
 const messagesContainer = document.getElementById("messagesContainer");
 let passcode = null;
+let username = "";
 
 document.addEventListener("DOMContentLoaded", () => {
   const passcodeModal = document.getElementById("passcodeModal");
   const modalPasscodeInput = document.getElementById("modalPasscodeInput");
+  const modalNameInput = document.getElementById("modalNameInput");
   const submitPasscodeButton = document.getElementById("submitPasscode");
   passcodeModal.style.display = "block";
   submitPasscodeButton.addEventListener("click", () => {
     passcode = modalPasscodeInput.value.trim();
+    username = modalNameInput.value.trim();
 
-    if (passcode === "") {
-      alert("Please enter a valid passcode.");
+    if (passcode === "" && username === "") {
+      alert("Please enter a valid passcode/Username. ");
       return;
     }
 
@@ -62,7 +65,7 @@ messageInput.addEventListener("keydown", (event) => {
 
 const sendMessage = (message) => {
   const messageData = {
-    message: message,
+    message: `${username}: ${message}`,
   };
 
   push(ref(database, `messages/${passcode}`), messageData);
