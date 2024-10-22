@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     passcode = modalPasscodeInput.value.trim();
     username = modalNameInput.value.trim();
 
-    if (passcode === "" && username === "") {
+    if (passcode === "" || username === "") {
       alert("Please enter a valid passcode/Username. ");
       return;
     }
