@@ -70,6 +70,7 @@ body {
     background-color: rgba(220, 128, 1, 0.33);
     color: #ffb40b;
 }
+
 .chat-container {
     height: 80vh;
     width: 90vw;
@@ -179,6 +180,14 @@ button {
     left: 50%;
     top: 50%;
 }
+#copyright{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    color: white;
+    font-size: small;
+    text-align: right;
+}
 
 @media screen and (max-width: 600px) {
     .chat-container {
@@ -211,3 +220,4 @@ button {
              width: 100%;
          }
 }
+
