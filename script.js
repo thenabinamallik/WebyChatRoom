@@ -53,6 +53,13 @@ sendMessageButton.addEventListener("click", () => {
   }
 });
 
+messageInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    sendMessageButton.click();
+  }
+});
+
 const sendMessage = (message) => {
   const messageData = {
     message: message,

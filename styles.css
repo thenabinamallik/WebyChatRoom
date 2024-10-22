@@ -165,7 +165,8 @@ button {
 
 #sendMessage {
     width: 70px;
-    background-color: rgb(60, 137, 231);
+    background-color: rgb(25, 164, 37);
+    color: white;
     font-size: larger;
 }
 
